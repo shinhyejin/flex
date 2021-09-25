@@ -1,0 +1,133 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  outline: 0; }
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  display: flex; }
+  main header {
+    width: 20%;
+    height: 100%;
+    padding: 10vh 5vw;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    /*얼라인 아이템은 아이템이 하나일때*/
+    flex-wrap: wrap;
+    /*줄바꿈, 얼라인 컨텐트 쓸 때 필수!!*/
+    z-index: 3; }
+    main header h1 {
+      font-size: 0; }
+      main header h1 i {
+        font-size: 5vw;
+        color: #fff;
+        margin-bottom: 10px; }
+      main header h1 span {
+        font-size: 0.8vw;
+        color: #fff; }
+    main header p {
+      color: #888;
+      font-size: 11px;
+      line-height: 1.1; }
+  main nav {
+    position: absolute;
+    top: 10vh;
+    right: 5vw; }
+    main nav ul {
+      display: flex; }
+      main nav ul li a {
+        font-size: 18px;
+        color: #bbb;
+        margin-right: 30px; }
+  main section {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    padding-top: 14vh; }
+    main section article {
+      flex: 1;
+      height: 100%;
+      transition: flex 1s;
+      position: relative;
+      z-index: 1;
+      padding: 40px; }
+      main section article:before {
+        content: '';
+        display: block;
+        width: 80%;
+        height: 90%;
+        background-color: #444;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        opacity: 0;
+        transition: left 1s, opacity 1s;
+        z-index: 1; }
+      main section article .inner {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-content: space-between;
+        flex-wrap: wrap;
+        height: 100%;
+        padding-bottom: 10vh; }
+        main section article .inner .txt h2 {
+          color: #fff;
+          font-size: 2vw;
+          margin-bottom: 40px;
+          padding-top: 70px;
+          opacity: 0.5;
+          transition: 0.5s;
+          font-family: 'Montserrat', sans-serif; }
+          main section article .inner .txt h2:after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: #777;
+            margin-top: 20px;
+            transition: 0.5s; }
+        main section article .inner .txt p {
+          font-size: 14px;
+          line-height: 1.4;
+          color: #999;
+          width: 200px; }
+        main section article .inner figure {
+          width: 100%;
+          height: 20vh;
+          overflow: hidden; }
+          main section article .inner figure video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(30%);
+            transition: filter 0.5s; }
+      main section article:hover {
+        flex: 1.5;
+        z-index: 2; }
+        main section article:hover:before {
+          left: 0;
+          opacity: 1; }
+        main section article:hover .inner .txt h2 {
+          font-size: 4vw;
+          opacity: 1;
+          padding-top: 20px; }
+          main section article:hover .inner .txt h2:after {
+            width: 80px;
+            background-color: orange; }
+        main section article:hover .inner figure video {
+          filter: saturate(130%); }
+
+/*# sourceMappingURL=style.css.map */
